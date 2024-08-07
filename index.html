@@ -19,19 +19,9 @@
         // .init()-wow.js 초기화 메서드  
 
         $(function () {
-            // 헤더 로드
-            $('#header').load('header.html', function (response, status, xhr) {
-                if (status == "error") {
-                    console.error('Error loading header.html: ' + xhr.status + ' ' + xhr.statusText);
-                }
-            });
-
-            // 풋터 로드
-            $('#footer').load('footer.html', function (response, status, xhr) {
-                if (status == "error") {
-                    console.error('Error loading footer.html: ' + xhr.status + ' ' + xhr.statusText);
-                }
-            });
+            // 헤더와 풋터를 로드하는 간단한 코드
+            $('#header').load('header.html');
+            $('#footer').load('footer.html');
         });
     </script>
 </head>
