@@ -18,45 +18,18 @@
         // wow.js 인스턴스 생성 
         // .init()-wow.js 초기화 메서드  
 
-        // $(function () {
-        //     // 헤더 로드
-        //     $('#header').load('header.html')
-        //         .fail(function () {
-        //             console.error('Error loading header.html');
-        //         });
-
-        //     // 풋터 로드
-        //     $('#footer').load('footer.html')
-        //         .fail(function () {
-        //             console.error('Error loading footer.html');
-        //         });
-        // });
-        document.addEventListener("DOMContentLoaded", function () {
+        $(function () {
             // 헤더 로드
-            fetch('header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok.');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header.html:', error));
+            $('#header').load('header.html')
+                .fail(function () {
+                    console.error('Error loading header.html');
+                });
 
             // 풋터 로드
-            fetch('footer.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok.');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer.html:', error));
+            $('#footer').load('footer.html')
+                .fail(function () {
+                    console.error('Error loading footer.html');
+                });
         });
     </script>
 </head>
